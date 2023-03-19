@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Bovino</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(45deg, cyan,yellow);
+        }
+        .box{
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0,0,0,0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 70%;
+            height: 100%;
+            /* Estilos para telas grandes */
+            @media screen and (min-width: 992px) {
+            /* Insira seus estilos CSS aqui */
+            }
+            /* Estilos para telas médias */
+            @media screen and (min-width: 768px) and (max-width: 991px) {
+            /* Insira seus estilos CSS aqui */
+            }
+
+            /* Estilos para telas pequenas */
+            @media screen and (max-width: 767px) {
+            /* Insira seus estilos CSS aqui */
+        }
+        }
+        fieldset{
+            border: 3px solid rgb(255, 255, 255);
+        }
+        legend{
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-right: 8px;
+        }
+        inputbox{
+            position: relative;
+        }
+        inputUser{
+            background: nome;
+            border: nome;
+            border-bottom: 1px solid white;
+            outline: nome;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,        
+        .inputUser:valid ~ .labelInput{ 
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        #data-nascimento{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+        #submit{
+            background-image: linear-gradient(to right, rgb(0,92,197), rgb(90,20,220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        #submit:hover{
+            background-image: linear-gradient(to right, rgb(0,80,172), rgb(52, 12, 128));
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <fieldset>
+                <legend><b>CADASTRO BOVINO</b></legend>
+                <br>
+                <div class="inputbox">
+                    <label for="codigo">CÓDIGO POR CABEÇA DO GADO</label>
+                    <br><br>
+                    <input type="text" nome="codigo" id="codigo" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <label for="leite">QUANTIDADE DE LEITE PRODUZIDA / SEMANA</label>
+                    <br><br>
+                    <input type="text" nome="leite" id="leite" class="inputUser" required>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <label for="racao">QUANTIDADE DER RAÇÃO INGERIDA POR SEMANA / KG</label>
+                    <br><br>
+                    <input type="racao" nome="racao" id="racao" class="inputUser" required>
+                </div>
+                <br><br>
+                <label for="data_nascimento"><b>ANO DE NASCIMENTO DO ANIMAL</b></label>
+                <br><br>
+                <input type="date" nome="data-nascimento" id="data-nascimento" class="inputUser" required>
+                <br><br><br>
+                <div class="inputbox">
+                    <label for="peso">PESO DO ANIMAL EM KG</label>
+                    <br><br>
+                    <input type="peso" nome="peso" id="peso" class="inputUser" required>
+                </div>
+                <br><br>
+                <input type="submit" nome="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
